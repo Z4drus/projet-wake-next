@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wakesurf Léman
 
-## Getting Started
+Site web moderne et performant pour un club de wakesurf sur le lac Léman, avec système de réservation en ligne intégré.
 
-First, run the development server:
+## Fonctionnalités
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Design Moderne et Responsive** : Interface utilisateur élégante et adaptée à tous les appareils (mobile-first)
+- **Système de Réservation Intégré** : Réservation en temps réel avec gestion des créneaux horaires
+- **Gestion des Codes Promo** : Achat et utilisation de codes pour des heures de wakesurf
+- **Paiements Sécurisés** : Intégration de Stripe (cartes bancaires) et Twint
+- **Panneau d'Administration** : Gestion complète des réservations, annulations et reporting
+- **Blog Intégré** : Publication d'actualités et d'articles optimisés pour le SEO
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Utilisées
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Frontend** : Next.js, React, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend** : Next.js API Routes, Prisma ORM
+- **Base de Données** : PostgreSQL
+- **Authentification** : NextAuth.js
+- **Paiements** : Stripe API
+- **Emails** : Nodemailer
+- **Animations** : Framer Motion
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prérequis
 
-## Learn More
+- Node.js 18+ et npm
+- PostgreSQL
 
-To learn more about Next.js, take a look at the following resources:
+## Installation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Cloner le dépôt :
+   ```bash
+   git clone https://github.com/votre-utilisateur/wakesurf-leman.git
+   cd wakesurf-leman
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Installer les dépendances :
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. Configurer les variables d'environnement :
+   - Copier le fichier `.env.example` vers `.env`
+   - Remplir les variables avec vos propres valeurs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Initialiser la base de données :
+   ```bash
+   npx prisma migrate dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+5. Lancer le serveur de développement :
+   ```bash
+   npm run dev
+   ```
+
+6. Accéder au site à l'adresse [http://localhost:3000](http://localhost:3000)
+
+## Structure du Projet
+
+- `/src/app` - Pages et routes de l'application
+- `/src/components` - Composants React réutilisables
+- `/src/lib` - Utilitaires et fonctions partagées
+- `/prisma` - Schéma de base de données et migrations
+- `/public` - Fichiers statiques (images, etc.)
+
+## Déploiement
+
+Le site est configuré pour être déployé sur Vercel. Connectez votre dépôt GitHub à Vercel pour un déploiement automatique à chaque push.
+
+## Licence
+
+Tous droits réservés © Wakesurf Léman
